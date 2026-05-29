@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "مواقيت | أذكار السنة",
+    "slug": "mawaqeet-adhkar",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1A5C38"
+    },
+    "fonts": [
+      "./assets/fonts/ThmanyahSans-Regular.ttf",
+      "./assets/fonts/ThmanyahSans-Bold.ttf"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mawaqeet.adhkar",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "نحتاج موقعك لحساب أوقات الصلاة واتجاه القبلة",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "نحتاج موقعك لحساب أوقات الصلاة",
+        "UIBackgroundModes": ["fetch", "remote-notification"]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1A5C38"
+      },
+      "package": "com.mawaqeet.adhkar",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "SCHEDULE_EXACT_ALARM"
+      ]
+    },
+    "plugins": [
+      ["expo-notifications", { "icon": "./assets/icon.png", "color": "#1A5C38" }],
+      "expo-location",
+      "expo-av",
+      ["expo-font", { "fonts": ["./assets/fonts/ThmanyahSans-Regular.ttf","./assets/fonts/ThmanyahSans-Bold.ttf"] }]
+    ]
+  }
+}
